@@ -1,6 +1,18 @@
 import React from "react";
 
 const Contact = () => {
+  const handleButtonClick = () => {
+    const email = "mihneaionut597@gmail.com";
+    const subject = "Inquiry";
+    const body = "Hello, I would like to get in touch.";
+
+    const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+
+    window.location.href = mailtoLink;
+  };
+
   return (
     <div
       name="contact"
@@ -14,11 +26,11 @@ const Contact = () => {
           <p className="py-6">Submit the form below to get in touch with me</p>
         </div>
 
-        <div className=" flex justify-center items-center">
+        <div className="flex justify-center items-center">
           <form
             action="https://getform.io/f/61c99527-2b15-42cf-9b55-ad37d2f7daa6"
             method="POST"
-            className=" flex flex-col w-full md:w-1/2"
+            className="flex flex-col w-full md:w-1/2"
           >
             <input
               type="text"
@@ -35,11 +47,14 @@ const Contact = () => {
             <textarea
               name="message"
               placeholder="Enter your message"
-              rows="10"
+              rows="5"
               className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
             ></textarea>
 
-            <button className="text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300">
+            <button
+              className="text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300"
+              onClick={handleButtonClick}
+            >
               Let's talk
             </button>
           </form>
