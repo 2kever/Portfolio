@@ -8,6 +8,7 @@ import C from "../assets/C-.png";
 import net from "../assets/net.png";
 import github from "../assets/github.png";
 import tailwind from "../assets/tailwind.png";
+import solidity from "../assets/solidity.png";
 
 const Experience = () => {
   const techs = [
@@ -57,6 +58,12 @@ const Experience = () => {
       id: 8,
       src: github,
       title: "GitHub",
+      style: "shadow-gray-400",
+    },
+    {
+      id: 9,
+      src: solidity,
+      title: "solidity",
       style: "shadow-gray-400",
     },
   ];
